@@ -1,0 +1,8 @@
+{
+	"_id": "$objectid",
+	"vorname": "$first",
+	"nachname": {"$last": {"nationality":"de"}},
+	"email": {"$email": {"domain":"test.de"}},
+	"geburtsdatum": "$birthday",
+	"_class": "online.trutz.spring.quickstart.framework.personen.DemoPerson"
+}
