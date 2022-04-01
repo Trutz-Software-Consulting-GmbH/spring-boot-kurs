@@ -1,4 +1,4 @@
-package com.example.demo.ui;
+package online.trutz.spring.quickstart.framework.ui;
 
 import org.springframework.core.annotation.Order;
 
@@ -10,13 +10,13 @@ import com.vaadin.flow.spring.annotation.UIScope;
 @SpringComponent
 @Order(1)
 @UIScope
-public class DummyTabPage extends VerticalLayout implements TabPage {
+public class DemoTabPage extends VerticalLayout implements QuickstartTabPage {
 
 	private static final long serialVersionUID = 1320451828716510461L;
 
 	@Override
 	public String getName() {
-		return "Dummy Tab Page";
+		return "Demo Tab Page";
 	}
 
 	@Override

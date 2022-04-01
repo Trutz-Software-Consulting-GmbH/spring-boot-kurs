@@ -1,4 +1,4 @@
-package com.example.demo;
+package online.trutz.spring.quickstart.framework;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

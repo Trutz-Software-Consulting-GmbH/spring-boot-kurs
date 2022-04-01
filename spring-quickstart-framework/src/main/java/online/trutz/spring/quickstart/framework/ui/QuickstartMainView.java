@@ -1,4 +1,4 @@
-package com.example.demo.ui;
+package online.trutz.spring.quickstart.framework.ui;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -11,16 +11,14 @@ import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.component.tabs.Tabs;
-import com.vaadin.flow.router.Route;
 
-@Route
-public class MainView extends AppLayout {
+public class QuickstartMainView extends AppLayout {
 
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 4756994433406474564L;
 
 	private final boolean touchOptimized = true;
 
-	public MainView(@Autowired List<TabPage> tabPages) {
+	public QuickstartMainView(@Autowired List<QuickstartTabPage> tabPages) {
 		addToNavbar(touchOptimized, createDrawerToggle());
 		addToDrawer(createTabs(tabPages));
 		// show first page
@@ -32,9 +30,9 @@ public class MainView extends AppLayout {
 		return drawerToggle;
 	}
 
-	private Tabs createTabs(List<TabPage> tabPages) {
+	private Tabs createTabs(List<QuickstartTabPage> tabPages) {
 		Map<Tab, Component> tabComponents = new LinkedHashMap<>();
-		for (TabPage page : tabPages) {
+		for (QuickstartTabPage page : tabPages) {
 			tabComponents.put(new Tab(page.getName()), page.getComponent());
 		}
 		Tabs tabs = new Tabs(tabComponents.keySet().stream().toArray(size -> new Tab[size]));
